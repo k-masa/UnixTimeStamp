@@ -8,7 +8,7 @@
 
 import Foundation
 
-class History {
+class History : NSObject {
     
     var unix: String!
     var date: String!

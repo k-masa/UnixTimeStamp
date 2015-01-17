@@ -10,13 +10,15 @@ import Cocoa
 
 class ViewController: NSViewController {
     
-    var histories: NSMutableArray = []
-    
     @IBOutlet weak var datePicker: NSDatePicker!
     @IBOutlet weak var unixTextField: NSTextField!
     @IBOutlet weak var resultTextField: NSTextField!
     @IBOutlet var historyArrayController: NSArrayController!
     
+    /*==================================================================================================
+    MARK: View Life Cycle Methods -
+    ====================================================================================================
+    */
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,6 +44,7 @@ class ViewController: NSViewController {
         if let pastObj: AnyObject = str {
             let pastStr = pastObj as? String
             if let pStr = pastStr {
+            
                 let time = atof(pStr)
                 if time == 0 {
                     return
@@ -49,9 +52,7 @@ class ViewController: NSViewController {
                 self.unixTextField.stringValue = "\(pStr)"
                 self.resultTextField.stringValue = self.getDateFromUnixTime(time)
                 
-                let history = History(unix: self.unixTextField.stringValue, date: self.resultTextField.stringValue)
-                self.histories.addObject(history)
-                self.historyArrayController.content = self.histories
+                self.setHistory(self.resultTextField.stringValue, unix: self.unixTextField.stringValue)
             }
         }
     }
@@ -66,6 +67,7 @@ class ViewController: NSViewController {
             return
         }
         self.resultTextField.stringValue = self.getDateFromUnixTime(unix)
+        self.setHistory(self.resultTextField.stringValue, unix: self.unixTextField.stringValue)
         self.setPastBoard(self.resultTextField.stringValue)
     }
     
@@ -75,7 +77,7 @@ class ViewController: NSViewController {
     */
     func getDateFromUnixTime(time: NSTimeInterval) -> String {
         var date = NSDate(timeIntervalSince1970: time);
-        return NSString.stringFromDate(date, formatString: "YYYY/MM/dd HH:mm:ss")
+        return NSString.stringFromDate(date, formatString: "YYYY/MM/dd HH:mm")
     }
     func getUnitTime(date: NSDate) -> String {
         var time = date.timeIntervalSince1970
@@ -86,5 +88,9 @@ class ViewController: NSViewController {
         pastboard.clearContents()
         let seccess = pastboard.setString(string, forType: NSPasteboardTypeString)
         return seccess
+    }
+    func setHistory(date: String, unix: String) {
+        let history = History(unix: unix, date: date)
+        self.historyArrayController.insertObject(history, atArrangedObjectIndex: 0)
     }
 }
