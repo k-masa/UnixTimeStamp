@@ -28,11 +28,9 @@ class ViewController: NSViewController {
         }
     }
     
-    //====================================================================================================
-    // MARK: IBAction Methods -
-    
-    /*====================================================================================================
-    *
+    /*==================================================================================================
+    MARK: IBAction Methods -
+    ====================================================================================================
     */
     @IBAction func pushClipboardBtn(sender: AnyObject) {
         var pastBoard = NSPasteboard.generalPasteboard()
@@ -63,8 +61,10 @@ class ViewController: NSViewController {
         self.resultTextField.stringValue = self.getDateFromUnixTime(unix)
         self.setPastBoard(self.resultTextField.stringValue)
     }
-    /*======================================================
-    *   Helper Methods
+    
+    /*==================================================================================================
+    MARK: Helper Methods -
+    ====================================================================================================
     */
     func getDateFromUnixTime(time: NSTimeInterval) -> String {
         var date = NSDate(timeIntervalSince1970: time);
