@@ -9,7 +9,12 @@
 import Cocoa
 
 class ViewController: NSViewController {
+    
+    @IBOutlet weak var datePicker: NSDatePicker!
+    @IBOutlet weak var unixTextField: NSTextField!
+    @IBOutlet weak var resultTextField: NSTextField!
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +25,10 @@ class ViewController: NSViewController {
         didSet {
         // Update the view, if already loaded.
         }
+    }
+    
+    @IBAction func pushClipboardBtn(sender: AnyObject) {
+        
     }
 
 
