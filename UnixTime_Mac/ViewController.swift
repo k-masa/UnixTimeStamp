@@ -10,10 +10,13 @@ import Cocoa
 
 class ViewController: NSViewController {
     
+    var histories: NSMutableArray = []
+    
     @IBOutlet weak var datePicker: NSDatePicker!
     @IBOutlet weak var unixTextField: NSTextField!
     @IBOutlet weak var resultTextField: NSTextField!
-
+    @IBOutlet var historyArrayController: NSArrayController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,6 +48,10 @@ class ViewController: NSViewController {
                 }
                 self.unixTextField.stringValue = "\(pStr)"
                 self.resultTextField.stringValue = self.getDateFromUnixTime(time)
+                
+                let history = History(unix: self.unixTextField.stringValue, date: self.resultTextField.stringValue)
+                self.histories.addObject(history)
+                self.historyArrayController.content = self.histories
             }
         }
     }

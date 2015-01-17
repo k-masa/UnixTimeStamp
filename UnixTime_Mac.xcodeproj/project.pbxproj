@@ -13,6 +13,7 @@
 		C61CEC761A6A326500DA6315 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C61CEC741A6A326500DA6315 /* Main.storyboard */; };
 		C61CEC821A6A326500DA6315 /* UnixTime_MacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61CEC811A6A326500DA6315 /* UnixTime_MacTests.swift */; };
 		C61CEC8C1A6A359A00DA6315 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61CEC8B1A6A359A00DA6315 /* Extension.swift */; };
+		C6D3345C1A6A96AB004978A8 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D3345B1A6A96AB004978A8 /* History.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		C61CEC801A6A326500DA6315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C61CEC811A6A326500DA6315 /* UnixTime_MacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnixTime_MacTests.swift; sourceTree = "<group>"; };
 		C61CEC8B1A6A359A00DA6315 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		C6D3345B1A6A96AB004978A8 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				C61CEC6E1A6A326500DA6315 /* AppDelegate.swift */,
 				C61CEC701A6A326500DA6315 /* ViewController.swift */,
 				C61CEC8B1A6A359A00DA6315 /* Extension.swift */,
+				C6D3345B1A6A96AB004978A8 /* History.swift */,
 				C61CEC721A6A326500DA6315 /* Images.xcassets */,
 				C61CEC741A6A326500DA6315 /* Main.storyboard */,
 				C61CEC6C1A6A326500DA6315 /* Supporting Files */,
@@ -213,6 +216,7 @@
 			files = (
 				C61CEC8C1A6A359A00DA6315 /* Extension.swift in Sources */,
 				C61CEC711A6A326500DA6315 /* ViewController.swift in Sources */,
+				C6D3345C1A6A96AB004978A8 /* History.swift in Sources */,
 				C61CEC6F1A6A326500DA6315 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +405,7 @@
 				C61CEC871A6A326500DA6315 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C61CEC881A6A326500DA6315 /* Build configuration list for PBXNativeTarget "UnixTime_MacTests" */ = {
 			isa = XCConfigurationList;
@@ -409,6 +414,7 @@
 				C61CEC8A1A6A326500DA6315 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
