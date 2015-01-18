@@ -81,8 +81,8 @@
 			children = (
 				C61CEC6E1A6A326500DA6315 /* AppDelegate.swift */,
 				C61CEC701A6A326500DA6315 /* ViewController.swift */,
-				C61CEC8B1A6A359A00DA6315 /* Extension.swift */,
-				C6D3345B1A6A96AB004978A8 /* History.swift */,
+				C61D1CA11A6B7E960032DBDD /* Model */,
+				C61D1CA01A6B7E880032DBDD /* Extension */,
 				C61CEC721A6A326500DA6315 /* Images.xcassets */,
 				C61CEC741A6A326500DA6315 /* Main.storyboard */,
 				C61CEC6C1A6A326500DA6315 /* Supporting Files */,
@@ -113,6 +113,22 @@
 				C61CEC801A6A326500DA6315 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C61D1CA01A6B7E880032DBDD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C61CEC8B1A6A359A00DA6315 /* Extension.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		C61D1CA11A6B7E960032DBDD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C6D3345B1A6A96AB004978A8 /* History.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -21,10 +21,7 @@ class ViewController: NSViewController {
     */
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let date = NSDate()
-        self.datePicker.dateValue = date
-        self.resultTextField.stringValue = self.getUnitTime(self.datePicker.dateValue)
+        self.configure()
     }
 
     override var representedObject: AnyObject? {
@@ -56,6 +53,7 @@ class ViewController: NSViewController {
             }
         }
     }
+    
     @IBAction func valueChangeDatePicker(sender: NSDatePicker) {
         self.resultTextField.stringValue = self.getUnitTime(sender.dateValue)
         self.setPastBoard(self.resultTextField.stringValue)
@@ -70,7 +68,6 @@ class ViewController: NSViewController {
         self.setHistory(self.resultTextField.stringValue, unix: self.unixTextField.stringValue)
         self.setPastBoard(self.resultTextField.stringValue)
     }
-    
     /*==================================================================================================
     MARK: Helper Methods -
     ====================================================================================================
@@ -79,18 +76,27 @@ class ViewController: NSViewController {
         var date = NSDate(timeIntervalSince1970: time);
         return NSString.stringFromDate(date, formatString: "YYYY/MM/dd HH:mm")
     }
+    
     func getUnitTime(date: NSDate) -> String {
         var time = date.timeIntervalSince1970
         return NSString(format: "%0.0f", time)
     }
+    
     func setPastBoard(string: String) -> Bool {
         var pastboard = NSPasteboard.generalPasteboard()
         pastboard.clearContents()
         let seccess = pastboard.setString(string, forType: NSPasteboardTypeString)
         return seccess
     }
+    
     func setHistory(date: String, unix: String) {
         let history = History(unix: unix, date: date)
         self.historyArrayController.insertObject(history, atArrangedObjectIndex: 0)
+    }
+    
+    func configure() {
+        let date = NSDate()
+        self.datePicker.dateValue = date
+        self.resultTextField.stringValue = self.getUnitTime(self.datePicker.dateValue)
     }
 }
