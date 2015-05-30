@@ -79,7 +79,7 @@ class ViewController: NSViewController {
     
     func getUnitTime(date: NSDate) -> String {
         var time = date.timeIntervalSince1970
-        return NSString(format: "%0.0f", time)
+        return NSString(format: "%0.0f", time) as String
     }
     
     func setPastBoard(string: String) -> Bool {
