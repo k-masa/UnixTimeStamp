@@ -14,6 +14,7 @@
 		C61CEC821A6A326500DA6315 /* UnixTime_MacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61CEC811A6A326500DA6315 /* UnixTime_MacTests.swift */; };
 		C61CEC8C1A6A359A00DA6315 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61CEC8B1A6A359A00DA6315 /* Extension.swift */; };
 		C6D3345C1A6A96AB004978A8 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D3345B1A6A96AB004978A8 /* History.swift */; };
+		C6F661AC1B1962AE007DD659 /* screenshot-1.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F661AB1B1962AE007DD659 /* screenshot-1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		C61CEC811A6A326500DA6315 /* UnixTime_MacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnixTime_MacTests.swift; sourceTree = "<group>"; };
 		C61CEC8B1A6A359A00DA6315 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		C6D3345B1A6A96AB004978A8 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		C6F661AB1B1962AE007DD659 /* screenshot-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screenshot-1.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				C61D1CA11A6B7E960032DBDD /* Model */,
 				C61D1CA01A6B7E880032DBDD /* Extension */,
 				C61CEC721A6A326500DA6315 /* Images.xcassets */,
+				C6F661AA1B196286007DD659 /* ScreenShot */,
 				C61CEC741A6A326500DA6315 /* Main.storyboard */,
 				C61CEC6C1A6A326500DA6315 /* Supporting Files */,
 			);
@@ -129,6 +132,14 @@
 				C6D3345B1A6A96AB004978A8 /* History.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		C6F661AA1B196286007DD659 /* ScreenShot */ = {
+			isa = PBXGroup;
+			children = (
+				C6F661AB1B1962AE007DD659 /* screenshot-1.png */,
+			);
+			name = ScreenShot;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +224,7 @@
 			files = (
 				C61CEC731A6A326500DA6315 /* Images.xcassets in Resources */,
 				C61CEC761A6A326500DA6315 /* Main.storyboard in Resources */,
+				C6F661AC1B1962AE007DD659 /* screenshot-1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
